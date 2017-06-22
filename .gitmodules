@@ -1,3 +1,3 @@
-[submodule "vendor/pixelgrade-pattern-library"]
-	path = vendor/pixelgrade-pattern-library
-	url = https://github.com/pixelgrade/pixelgrade-pattern-library.git
+[submodule "vendor/pg-pattern-library"]
+	path = vendor/pg-pattern-library
+	url = https://github.com/pixelgrade/pg-pattern-library.git
