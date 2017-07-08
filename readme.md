@@ -22,7 +22,7 @@ The theme uses [gulp](http://gulpjs.com) to run various tasks such as compiling 
 
 **Getting it set up**
 
-1. Clone the repository to the `themes` directory of your WordPress install. `git clone --recursive git@github.com:humanmade/hm-handbook-theme.git`
+1. Clone the repository to the `themes` directory of your WordPress install. `git clone --recursive git@github.com:pixelgrade/pg-guides-theme.git`
 1. If you didn't pass `--recursive` when cloning in the previous step, you need to make sure you run `git submodule update --recursive --init` from inside the hm-handbook-theme directory to pull down the submodules that are used in this theme.
 1. `npm install` to install all required dependencies.
 1. `gulp` to run all the tasks required to build the theme.
