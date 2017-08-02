@@ -1,7 +1,8 @@
 $images-path: "./../../../vendor/pg-pattern-library/assets/images" !default;
 
 // External
-@import "./../../../vendor/pg-pattern-library/assets/sass/style";
+// @import "./../../../vendor/pg-pattern-library/assets/sass/style";
+@import "./../../../vendor/pg-pattern-library/src/styles/juniper";
 
 // Base
 @import "base/variables";

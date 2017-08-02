@@ -1,7 +1,8 @@
 $images-path: "./../../../vendor/pg-pattern-library/assets/images" !default;
 
 // External
-@import "./../../../vendor/pg-pattern-library/assets/sass/style";
+// @import "./../../../vendor/pg-pattern-library/assets/sass/style";
+@import "./../../../vendor/pg-pattern-library/src/styles/juniper";
 
 // Base
 @import "base/variables";
@@ -28,10 +29,10 @@ html {
 .login #nav {
 	margin: $base-line-height / 2 auto;
 	a {
-		color: $white;
+		color: $color-white;
 		@include text-sm;
 		&:hover{
-			color: $white;
+			color: $color-white;
 			text-decoration: underline;
 		}
 	}
@@ -73,8 +74,8 @@ html {
 
 #user_login,
 #user_pass {
-	@extend .Form_Field;
-	@extend .Form_Field-Lg;
+	@extend .form__field;
+	@extend .form__field--lg;
 }
 
 .login label,
@@ -82,7 +83,7 @@ html {
 .wp-core-ui .button,
 .wp-core-ui .button-primary,
 .wp-core-ui .button-secondary {
-	@extend .Form_Label;
+	@extend .form__label;
 	color: $color-text-heading;
 }
 
@@ -93,8 +94,8 @@ html {
 }
 
 #wp-submit {
-	@extend .Btn;
-	@extend .Btn-Secondary;
-	@extend .Btn-Small;
+	@extend .btn;
+	@extend .btn--secondary;
+	@extend .btn--small;
 	margin-right: 0;
 }

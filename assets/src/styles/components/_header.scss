@@ -1,6 +1,6 @@
 .site-header {
 
-	@extend .util-Clearfix;
+	@extend .util-clearfix;
 	background-color: $color-primary;
 	padding: 0;
 	display: flex;
@@ -37,7 +37,7 @@
 	.site-title  {
 		@include font-heading;
 		@include text-sm;
-		color: $white;
+		color: $color-white;
 		text-align: center;
 		position: relative;
 	}
