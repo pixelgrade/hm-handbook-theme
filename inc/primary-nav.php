@@ -108,7 +108,7 @@ function nav_accordion_item_class( $classes, $item, $args ) {
 			$classes[] = 'NavAccordion_Item-Active';
 		}
 
-		if ( array_intersect( $classes, [ 'current-menu-ancestor' ] ) ) {
+		if ( array_intersect( $classes, [ 'current-menu-ancestor', 'current-menu-ancestor' ] ) ) {
 			$classes[] = 'NavAccordion_Item-Open';
 		}
 
