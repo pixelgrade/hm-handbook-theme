@@ -1,7 +1,15 @@
 $images-path: "./../../../vendor/hm-pattern-library/assets/images" !default;
 
 // External
-@import "./../../../vendor/hm-pattern-library/assets/sass/style";
+@import "./../../../vendor/pg-pattern-library/assets/scss/core";
+@import "./../../../vendor/hm-pattern-library/src/styles/base/typography-mixins";
+@import "./../../../vendor/hm-pattern-library/src/styles/utilities/clearfix";
+
+@import "normalize";
+@import "variables";
+
+$white: #FFF;
+$border-color: color( blue, light );
 
 // Base
 @import "base/variables";
@@ -17,46 +25,12 @@ $images-path: "./../../../vendor/hm-pattern-library/assets/images" !default;
 @import "components/Pagination";
 @import "components/PageHistory";
 @import "components/Nav";
+@import "components/SearchBar";
 @import "components/comments";
 @import "components/updates";
 
 .article {
 	position: relative;
-}
-
-.SearchBar {
-
-	.SearchBar_Result_Title {
-		font-size: 1rem;
-		line-height: $base-line-height;
-		margin-bottom: .375rem;
-	}
-
-	&-Loading .SearchBar_Submit {
-
-		.Loading {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-top: $base-line-height / -2;
-			margin-left: $base-line-height / -2;
-		}
-
-		&:after {
-			display: none;
-		}
-
-	}
-
-	.SearchBar_Results-Info {
-		margin: 0 #{ $gutter-width / 2 } #{ $base-line-height / 2 } #{ $gutter-width / 2 };
-		border-top: 1px solid desaturate( $color-primary, 5% );
-		padding-top: $base-line-height / 2;
-		font-size: 1rem;
-		line-height: $base-line-height;
-		color: #FFF;
-	}
-
 }
 
 .widget {
@@ -68,9 +42,45 @@ $images-path: "./../../../vendor/hm-pattern-library/assets/images" !default;
 }
 
 .widget_text {
-	.HMLogo {
+
+	.pg-logo {
 		margin-left: 0;
 		margin-bottom: 0;
 	}
 
+}
+
+.NavAccordion {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavAccordion_Item {
+    display: block;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    .NavAccordion_Item {
+        border-bottom: none;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
+}
+
+.NavAccordion_Anchor {
+    display: block;
+    padding: .375rem 0;
+    position: relative;
+
+    &:hover {
+        color: inherit;
+    }
 }

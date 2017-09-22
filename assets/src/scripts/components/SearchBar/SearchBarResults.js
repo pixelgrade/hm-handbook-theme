@@ -28,10 +28,10 @@ export default class SearchBarResults extends Component {
 		let displayNoResults = this.props.query.length > 1 && this.props.results.length < 1;
 
 		return (
-			<div className="SearchBar_Results" style={ { maxHeight: ( height - 108 ) + 'px' } }>
+			<div className="search-bar__results" style={ { maxHeight: ( height - 108 ) + 'px' } }>
 
 				<h3
-					className="SearchBar_Results-Info"
+					className="search-bar__results-info"
 					style={ { display: displayNoResults ? 'block' : 'none' } }>
 					{ searchBarSettings.strings.noResults }
 				</h3>

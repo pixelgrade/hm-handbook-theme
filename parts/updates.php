@@ -11,7 +11,7 @@ namespace HM_Handbook;
 
 <div class="updates">
 
-	<div class="updates--box">
+	<div class="updates--box  brand-background-color-light">
 
 		<h3 class="updates--heading"><?php esc_html_e( 'Latest pages', 'hm-handbook' ); ?></h3>
 
@@ -19,7 +19,7 @@ namespace HM_Handbook;
 
 	</div>
 
-	<div class="updates--box">
+	<div class="updates--box  brand-background-color-light">
 
 		<h3 class="updates--heading"><?php esc_html_e( 'Recent edits', 'hm-handbook' ); ?></h3>
 

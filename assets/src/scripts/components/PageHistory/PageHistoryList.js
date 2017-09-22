@@ -26,11 +26,11 @@ export default class PageHistoryList extends React.Component {
 		containerClasses = [ 'PageHistory_List_Container' ];
 		containerClasses.push( this.state.expanded ? 'PageHistory_List_Container-Expanded' : 'PageHistory_List_Container-Collapsed' );
 
-		toggleButtonClasses = [ 'Btn Btn-Small Btn-Toggle' ];
+		toggleButtonClasses = [ 'c-btn c-btn--small c-btn--toggle' ];
 		toggleButtonClasses.push( this.state.expanded ? ' Btn-StateExpanded' : null );
 
-		loadMorebuttonClasses = [ 'Btn Btn-Small Btn-Link' ];
-		loadMorebuttonClasses.push( this.props.loading ? 'Btn-Loading' : null );
+		loadMorebuttonClasses = [ 'c-btn c-btn--small c-btn--Link' ];
+		loadMorebuttonClasses.push( this.props.loading ? 'c-btn--loading' : null );
 
 		return (
 			<div ref="list" className={ containerClasses.join( ' ' ) }>

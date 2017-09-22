@@ -24,16 +24,16 @@ namespace HM_Handbook;
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( 'brand-blue' ); ?>>
 
-	<header class="site-header">
+	<header class="site-header brand-background-color">
 
 		<div class="site-logo">
 			<?php
 				if ( has_custom_logo() ) {
 					the_custom_logo();
 				} else {
-					echo '<a class="HMLogo HMLogo-White" href ="' . esc_url( home_url('/') ) . '">Human Made Limited</a>';
+					echo '<a class="pg-logo  pg-logo--white" href ="' . esc_url( home_url('/') ) . '">Human Made Limited</a>';
 				}
 
 				if ( is_front_page() ) {

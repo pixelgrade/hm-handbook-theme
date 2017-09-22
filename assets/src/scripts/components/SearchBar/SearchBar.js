@@ -19,28 +19,28 @@ export default class SearchBar extends Component {
 	render() {
 
 		let searchBarClassNames = classNames({
-			'SearchBar':            true,
-			'SearchBar-Focused':    this.state.focused,
-			'SearchBar-HasResults': this.state.focused,
-			'SearchBar-Loading':    this.state.loading,
+			'search-bar':            true,
+			'search-bar--focused':    this.state.focused,
+			'search-bar--has-results': this.state.focused,
+			'search-bar--loading':    this.state.loading,
 		});
 
 		return <div className={ searchBarClassNames }>
 
 			<form
-				className="SearchBar_Container"
+				className="search-bar__container"
 				role="search"
 				method="get"
 				action="/"
 				onSubmit={ (e) => { this.onSearch() } }
 			>
 
-				<label className="SearchBar_Label" htmlFor="site-search">{ searchBarSettings.strings.label }</label>
+				<label className="search-bar__label" htmlFor="site-search">{ searchBarSettings.strings.label }</label>
 
 				<input
 					ref="input"
 					autoComplete="off"
-					className="SearchBar_Field"
+					className="search-bar__field"
 					name="s"
 					type="search"
 					id="site-search"
@@ -51,7 +51,7 @@ export default class SearchBar extends Component {
 					onBlur={ () => this.onBlur() }
 				/>
 
-				<button className="SearchBar_Submit" type="submit">
+				<button className="search-bar__submit" type="submit">
 					{ searchBarSettings.strings.button }
 					<span className={ this.state.loading ? 'Loading Loading-Active' : 'Loading' }></span>
 				</button>

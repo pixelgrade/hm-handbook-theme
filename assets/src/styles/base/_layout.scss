@@ -39,7 +39,7 @@ body {
 
 	@media #{ $mq-lg-up } {
 		max-width: calc( 40rem + #{ $gutter-width * 2 + 250px + $gutter-width * 4 } );
-		padding: ( $base-line-height * 2 ) ( $gutter-width * 2 );
+		padding: 3rem;
 	}
 }
 

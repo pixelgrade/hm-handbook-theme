@@ -36,7 +36,7 @@
 }
 
 .PageHistory_List_Container {
-	.PageHistory_List + .Btn .Loading {
+	.PageHistory_List + .c-btn .Loading {
 		background-image: url( "#{ $images-path }/icons/icon-spinner-black.svg" );
 		background-size: 50%;
 		margin-right: 7px;
@@ -50,7 +50,7 @@
 	overflow: hidden;
 
 	.PageHistory_List,
-	.PageHistory_List + .Btn {
+	.PageHistory_List + .c-btn {
 		display: none;
 	}
 
@@ -61,7 +61,7 @@
 	height: auto;
 
 	.PageHistory_List,
-	.PageHistory_List + .Btn {
+	.PageHistory_List + .c-btn {
 		display: block;
 
 		&[disabled] {
@@ -97,7 +97,7 @@
 		left: $gutter-width / 4 - 1px;
 	}
 
-	& + .Btn {
+	& + .c-btn {
 		margin: 0;
 		padding: 0;
 	}
@@ -179,7 +179,7 @@
 
 }
 
-.Btn-Toggle {
+.c-btn-Toggle {
 
 	background: none;
 	position: absolute;
@@ -233,7 +233,7 @@
 	}
 
 
-	&.Btn-StateExpanded:after {
+	&.c-btn-StateExpanded:after {
 		background-image: url( "#{ $images-path }/icons/icon-minus-white.svg" );
 	}
 

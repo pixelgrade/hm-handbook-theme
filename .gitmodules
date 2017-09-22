@@ -1,3 +1,6 @@
 [submodule "vendor/hm-pattern-library"]
 	path = vendor/hm-pattern-library
 	url = https://github.com/humanmade/hm-pattern-library.git
+[submodule "vendor/pg-pattern-library"]
+	path = vendor/pg-pattern-library
+	url = https://github.com/pixelgrade/pg-pattern-library.git

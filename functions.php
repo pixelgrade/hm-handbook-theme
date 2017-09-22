@@ -172,7 +172,7 @@ function get_parent_theme_file_uri( $file = '' ) {
  * @return string Attributes.
  */
 function posts_link_attributes_next() {
-	return 'class="Btn Btn-Secondary Btn-Small Pagination-Next"';
+	return 'class="c-btn  c-btn--primary  Pagination-Next"';
 }
 
 /**
@@ -181,7 +181,7 @@ function posts_link_attributes_next() {
  * @return string Attributes.
  */
 function posts_link_attributes_prev() {
-	return 'class="Btn Btn-Secondary Btn-Small Pagination-Prev"';
+	return 'class="c-btn  c-btn--primary  Pagination-Prev"';
 }
 
 /**

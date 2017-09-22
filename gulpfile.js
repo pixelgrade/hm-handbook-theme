@@ -69,7 +69,7 @@ gulp.task( 'lint-sass', function () {
 
 // Watch for changes in JS/CSS.
 gulp.task('watch', function() {
-	gulp.watch( 'assets/src/styles/**/*.scss', ['styles', 'lint-sass' ] );
+	gulp.watch( [ 'assets/src/styles/**/*.scss', 'vendor/**/*.scss' ], ['styles'] );
 	gulp.watch( [ 'assets/src/scripts/**/*.js', 'assets/src/scripts/**/*.jsx' ], ['js'] );
 });
 

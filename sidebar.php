@@ -9,7 +9,7 @@ namespace HM_Handbook;
 
 ?>
 
-<nav class="site-sidebar">
+<nav class="site-sidebar brand-background-color-light">
 	<?php
 
 	if ( has_nav_menu( 'nav-primary' ) ) {
