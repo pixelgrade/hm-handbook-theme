@@ -17,6 +17,7 @@ namespace HM_Handbook;
 		wp_nav_menu( [
 			'theme_location' => 'nav-primary',
 			'menu_class'     => 'NavAccordion',
+			'link_after'     => '<button class="NavAccordion_Toggle">' . __( 'Toggle', 'hm-handbook' ) .'</button>'
 		] );
 
 	} else {

@@ -61,9 +61,10 @@ function render_nav_item( \WP_Post $page ) {
 	}
 
 	printf(
-		'<li class="%s"><a href="%s" class="NavAccordion_Anchor">%s</a>',
+		'<li class="%s"><a href="%s" class="NavAccordion_Anchor"><button class="NavAccordion_Toggle">%s</button>%s</a>',
 		esc_attr( implode( ' ', array_map( 'sanitize_html_class', $classes ) ) ),
 		esc_url( get_permalink( $page->ID ) ),
+		__( 'Toggle', 'hm-handbook' ),
 		esc_html( $page->post_title )
 	);
 
@@ -104,6 +105,10 @@ function nav_accordion_item_class( $classes, $item, $args ) {
 		$classes[] = 'NavAccordion_Item';
 		if ( array_intersect( $classes, [ 'current-menu-item' ] ) ) {
 			$classes[] = 'NavAccordion_Item-Active';
+		}
+
+		if ( array_intersect( $classes, [ 'menu-item-has-children' ] ) ) {
+			$classes[] = 'NavAccordion_Item-HasChildren';
 		}
 	}
 	return $classes;

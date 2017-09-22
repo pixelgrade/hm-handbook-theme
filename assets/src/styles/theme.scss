@@ -68,10 +68,49 @@ $border-color: color( blue, light );
 
     .NavAccordion_Item {
         border-bottom: none;
+
+        .NavAccordion_Anchor:after {
+            content: " ";
+            width: .5rem;
+            border-bottom: 1px solid #d9d9d9;
+            margin-top: -1px;
+            position: absolute;
+            top: 1.125rem;
+            left: -1.25rem;
+        }
     }
 
     ul {
-        padding-left: 1rem;
+        position: relative;
+        padding-left: 1.25rem;
+
+        &:after {
+            content: " ";
+            border-left: 1px solid #d9d9d9;
+            top: -1px;
+            bottom: 1.125rem;
+            left: 0;
+            position: absolute;
+        }
+    }
+
+    > ul {
+        display: none;
+    }
+}
+
+.NavAccordion_Item-Active {
+    color: color(blue);
+}
+
+.NavAccordion_Item-Open {
+
+    > ul {
+        display: block;
+    }
+
+    > a .NavAccordion_Toggle:after {
+        transform: rotate(180deg);
     }
 }
 
@@ -79,8 +118,45 @@ $border-color: color( blue, light );
     display: block;
     padding: .375rem 0;
     position: relative;
+    color: inherit;
 
     &:hover {
         color: inherit;
+    }
+}
+
+.NavAccordion_Toggle {
+    display: none;
+    position: relative;
+    float: right;
+    margin: -.375rem 0;
+    padding: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    text-indent: 100%;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    outline: 0;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 12px;
+        height: 12px;
+        margin-left: -6px;
+        margin-top: -6px;
+
+        background: url(./../images/icon-caret-down.svg) no-repeat center center;
+        background-size: 100% 100%;
+        text-indent: 0;
+        opacity: 0.75;
+    }
+
+    .NavAccordion_Item-HasChildren > a & {
+        display: block;
     }
 }
