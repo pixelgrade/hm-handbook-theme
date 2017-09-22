@@ -103,8 +103,13 @@ function is_nav_item_current( \WP_Post $page ) {
 function nav_accordion_item_class( $classes, $item, $args ) {
 	if ( 'nav-primary' === $args->theme_location ) {
 		$classes[] = 'NavAccordion_Item';
+
 		if ( array_intersect( $classes, [ 'current-menu-item' ] ) ) {
 			$classes[] = 'NavAccordion_Item-Active';
+		}
+
+		if ( array_intersect( $classes, [ 'current-menu-ancestor' ] ) ) {
+			$classes[] = 'NavAccordion_Item-Open';
 		}
 
 		if ( array_intersect( $classes, [ 'menu-item-has-children' ] ) ) {

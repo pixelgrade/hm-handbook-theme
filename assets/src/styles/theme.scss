@@ -118,7 +118,10 @@ $border-color: color( blue, light );
     display: block;
     padding: .375rem 0;
     position: relative;
-    color: inherit;
+
+    .NavAccordion_Item-Active > & {
+        color: inherit;
+    }
 
     &:hover {
         color: inherit;
@@ -129,15 +132,18 @@ $border-color: color( blue, light );
     display: none;
     position: relative;
     float: right;
-    margin: -.375rem 0;
     padding: 0;
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 0.25rem;
     text-indent: 100%;
     overflow: hidden;
     background: transparent;
     border: 0;
     outline: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color .2s ease-out;
 
     &:after {
         content: " ";
@@ -145,15 +151,23 @@ $border-color: color( blue, light );
         top: 50%;
         left: 50%;
 
-        width: 12px;
-        height: 12px;
-        margin-left: -6px;
-        margin-top: -6px;
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+        margin-top: -5px;
 
         background: url(./../images/icon-caret-down.svg) no-repeat center center;
         background-size: 100% 100%;
         text-indent: 0;
         opacity: 0.75;
+    }
+
+    &:hover {
+        background-color: rgba(black, 0.1);
+
+        &:after {
+            opacity: 1;
+        }
     }
 
     .NavAccordion_Item-HasChildren > a & {
